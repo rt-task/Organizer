@@ -1,0 +1,15 @@
+<div class="noteList">
+    <app-card *ngFor="let note of noteList"
+        class="note-card"
+        [id]="note.id"
+        [title]="note.title"
+        [content]="note.content"
+        navigationText="Details"
+        firstButtonText="Complete"
+        secondButtonText="Delete"
+        [firstButtonHidden]="note.isCompleted"
+        (navigationEvent)="goToDetails($event)"
+        (firstClickEvent)="completeNote($event)"
+        (secondClickEvent)="deleteNote($event)">
+    </app-card>
+</div>

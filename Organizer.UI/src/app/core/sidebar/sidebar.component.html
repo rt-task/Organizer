@@ -1,0 +1,7 @@
+<div class="side-bar" [ngClass]="isClosed ? 'closed-side-bar' : 'opened-side-bar'">
+    <app-button class="close-button" [text]="closeSidebarSymbol" (clickEvent)="changeState()"></app-button>
+    <app-button class="button-container home-button" *ngIf="!isClosed" text="HOME"  routerLink="home"></app-button>
+    <app-button class="button-container notes-button" *ngIf="!isClosed" text="NOTES" routerLink="notes"></app-button>
+    <app-button class="button-container planner-button" *ngIf="!isClosed" text="PLANNER" routerLink="planner"></app-button>
+    <app-button class="button-container budget-button" *ngIf="!isClosed" text="BUGDET" routerLink="budget"></app-button>
+</div>

@@ -1,0 +1,75 @@
+<form [formGroup]="mainForm" class="form-group">
+    <div formGroupName="checkboxGroup" class="check-filters-group">
+        <div *ngFor="let filter of formModel.checkboxFilters" class="check-filter">
+            <input
+                [formControlName]="filter.id"
+                class="check-filter-input"
+                [ngClass]="filter.inputClassList"
+                type="checkbox"
+                [name]="filter.name"
+                [id]="filter.id"
+                [disabled]="filter.isDisabled">
+            <label
+                class="check-filter-label"
+                [ngClass]="filter.labelClassList"
+                [for]="filter.id">
+                    {{ filter.label }}
+            </label>
+        </div>
+    </div>
+    <div formGroupName="radioGroup" class="radio-filters-group">
+        <div *ngFor="let filter of formModel.radioFilters" class="radio-filter">
+            <input
+                [formControlName]="filter.id"
+                class="radio-filter-input"
+                [ngClass]="filter.inputClassList"
+                type="radio"
+                [name]="filter.name"
+                [id]="filter.id"
+                [disabled]="filter.isDisabled">
+            <label
+                class="radio-filter-label"
+                [ngClass]="filter.labelClassList"
+                [for]="filter.id">
+                    {{ filter.label }}
+            </label>
+        </div>
+    </div>
+    <div formGroupName="selectGroup" class="selection-filters-group">
+        <div class="selection-filter" *ngFor="let filter of formModel.selectionFilters">
+            <select
+                [formControlName]="filter.id"
+                class="selection-filter-input"
+                [ngClass]="filter.inputClassList"
+                [name]="filter.name"
+                [id]="filter.id"
+                [disabled]="filter.isDisabled">
+                    <option
+                        *ngFor="let option of filter.options"
+                        class="option-filter-input"
+                        [ngClass]="option.inputClassList"
+                        [value]="option.value">
+                            {{ option.label }}
+                    </option>
+            </select>
+            <label
+                class="selection-filter-label"
+                [ngClass]="filter.labelClassList"
+                [for]="filter.id">
+                    {{ filter.label }}
+            </label>
+        </div>
+    </div>
+    <div formGroupName="keywordGroup" class="keywords-filters-group">
+        <input
+            [formControlName]="filter.id"
+            *ngFor="let filter of formModel.keywordFilters"
+            class="keyword-filter-input"
+            [ngClass]="filter.inputClassList"
+            [type]="filter.type"
+            [name]="filter.name"
+            [id]="filter.id"
+            [placeholder]="filter.placeholder"
+            [disabled]="filter.isDisabled">
+    </div>
+</form>

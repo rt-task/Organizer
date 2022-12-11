@@ -1,0 +1,124 @@
+.noteList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    overflow-y: auto;
+
+    .note-card {
+        width: 30%;
+        height: 45%;
+        font-size: 1.2rem;
+        background-color: $light-gray;
+        border-radius: 15px;
+        min-width: $card-min-w;
+        min-height: $card-min-h;
+
+        .card-title-container {
+            font-size: 1.5rem;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            column-gap: 3%;
+            background-color: $dark-gray;
+            color: $light-gray-secondary;
+            border-radius: 15px 15px 0 0;
+
+            .card-id {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: 70%;
+                font-weight: 600;
+                color: $green-yellow;
+                border: 2px solid $green-yellow;
+                border-radius: 15px 0 0 0;
+                margin-left: 2%;
+            }
+
+            .card-title {
+                width: 75%;
+            }
+        }
+    
+        .card-content {
+            padding: 0 2% 0 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+        }
+    
+        .card-actions {
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+
+            .button-outer-container {
+                width: 30%;
+                height: 80%;
+            }
+
+            .button {
+                background: transparent;
+                border: none;
+                font-size: 1.1rem;
+                font-weight: 600;
+                height: 100%;
+                width: 100%;
+                border-radius: 15px;
+            }
+
+            .first-button {
+                .button {
+                    color: $blue-secondary;
+                    border: none;
+                }
+
+                .button:hover {
+                    border-bottom: 3px solid $blue-secondary;
+                    border-left: 1px solid $blue-secondary;
+                }
+
+                .button:active {
+                    border: none;
+                }
+            }
+
+            .second-button {
+                .button {
+                    color: $dark-green;
+                    border: none;
+                }
+
+                .button:hover {
+                    border-bottom: 3px solid $dark-green;
+                    border-left: 1px solid $dark-green;
+                }
+
+                .button:active {
+                    border: none;
+                }
+            }
+
+            .third-button {
+                .button {
+                    color: $negative-feedback;
+                    border: none;
+                }
+
+                .button:hover {
+                    border-bottom: 3px solid $negative-feedback;
+                    border-left: 1px solid $negative-feedback;
+                }
+
+                .button:active {
+                    border: none;
+                }
+            }
+        }
+    }
+}

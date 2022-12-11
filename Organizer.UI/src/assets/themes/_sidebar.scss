@@ -1,0 +1,99 @@
+.side-bar {
+    height: 100%;
+    background: $dark-gray;
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+
+    .button {
+        background-color: transparent;
+        border: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $light-gray;
+    }
+
+    .close-button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+        height: 6%;
+    
+        .button {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: $light-gray-secondary;
+            border-right: 3px solid $light-gray;
+            border-bottom: 3px solid $light-gray;
+            border-radius: 25%;
+        }
+    
+        .button:active {
+            border: none;
+        }
+    }
+
+    .button-container {
+        height: 6%;
+        transition: background-size 0.5s ease-out;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80%;
+
+        .button {
+            text-align: start;
+            margin-left: 3%;
+            width: 100%;
+        }
+    }
+
+    .button-container:hover {
+        background-size: 100%;
+
+        .button {
+            color: $light-gray-secondary;
+        }
+    }
+}
+
+.opened-side-bar {
+    align-items: center;
+
+    .home-button {
+        margin-top: 10%;
+        background: linear-gradient(90deg, $yellow, $yellow);
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+
+    .notes-button {
+        background: linear-gradient(90deg, $light-blue, $light-blue);
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+
+    .planner-button {
+        background: linear-gradient(90deg, $green, $green);
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+
+    .budget-button {
+        background: linear-gradient(90deg, $red, $red);
+        background-repeat: no-repeat;
+        background-size: 2%;
+    }
+}
+
+.closed-side-bar {
+    height: 100%;
+    background: $dark-gray;
+    width: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+

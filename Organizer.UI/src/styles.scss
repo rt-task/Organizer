@@ -1,0 +1,18 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    margin: 0
+}
+
+@import './assets/themes/colors';
+@import './assets/themes/constants';
+@import './assets/themes/layout';
+@import './assets/themes/header';
+@import './assets/themes/sidebar';
+@import './assets/themes/home';
+@import './assets/themes/notes';

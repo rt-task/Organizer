@@ -1,0 +1,12 @@
+<div class="card-title-container">
+    <p class="card-id">#{{ id }}</p>
+    <p class="card-title">{{ title | uppercase }}</p>
+</div>
+<div class="card-content">
+    <p>{{ content | shortentext: 200 }}</p>
+</div>
+<div class="card-actions">
+    <app-button class="button-outer-container first-button" [text]="navigationText" (clickEvent)="navigate()"></app-button>
+    <app-button class="button-outer-container second-button" [text]="firstButtonText" [isHidden]="firstButtonHidden" (clickEvent)="firstButtonClick()"></app-button>
+    <app-button class="button-outer-container third-button" [text]="secondButtonText" (clickEvent)="secondButtonClick()"></app-button>
+</div>
